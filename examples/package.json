@@ -11,7 +11,7 @@
     "clean": "node ./scripts/clean.mjs",
     "develop": "cross-env NODE_ENV=development concurrently --kill-others \"npm run watch\" \"npm run serve\"",
     "lint": "eslint .",
-    "serve": "serve dist -l 5555 --no-request-logging --config ../serve.json",
+    "serve": "serve -p 5555 -L -c serve.json",
     "watch": "npm run -s build:metadata && cross-env NODE_ENV=development rollup -c -w"
   },
   "devDependencies": {
@@ -43,7 +43,7 @@
     "react-es6": "1.0.2",
     "react-router-dom": "5.3.4",
     "rollup": "4.35.0",
-    "serve": "14.2.4",
+    "serve": "14.2.5",
     "sharp": "0.33.5"
   },
   "author": "PlayCanvas <support@playcanvas.com>",
